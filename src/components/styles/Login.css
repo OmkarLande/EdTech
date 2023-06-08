@@ -1,0 +1,51 @@
+.login{
+    display: flex;
+    flex-direction: row;
+    margin: auto 40px;
+}
+.login form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    width: 500px;
+    height: 400px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+.login form label{
+    margin-top: 5px;
+}
+.login form input{
+    width: 450px;
+    height: 30px;
+    margin-top: 20px;
+}
+.login form input[type="email"], .login form input[type="password"]{
+    background-color: #96999E;
+    color: black;
+    border: none;
+    box-shadow: none;
+    
+}
+.login form a{
+    text-align: right;
+    text-decoration: none;
+    color: black
+}
+
+.login form input[type="submit"]{
+    background-color: #33BEAF;
+    color: black;
+    border-radius: 10px;
+}
+
+.login .carousal{
+    width: 500px;
+    height: 400px;
+}
+.login .carousal img{
+    width: 500px;
+    height: 400px;
+}
