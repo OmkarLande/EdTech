@@ -1,0 +1,58 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+header .advertiesment{
+    background-color: #96999E;
+}
+header .advertiesment p{
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+
+header nav{
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    width: 100%;
+}
+header nav .title{
+    margin: auto
+}
+header nav .title h1{
+    text-align: center;
+}
+header nav .navigation-menu{
+    margin: auto;
+    display: flex;
+}
+header nav .navigation-menu ul{
+    display: flex;
+    list-style: none;
+}
+header nav .navigation-menu ul li{
+    margin: auto;
+    padding: 10px 20px;
+}
+
+header nav .navigation-menu ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+header nav .profile{
+    display: flex;
+}
+header nav .profile ul{
+    display: flex;
+    list-style: none;
+}
+header nav .profile ul li{
+    margin: auto;
+    padding: 10px 20px;
+}
