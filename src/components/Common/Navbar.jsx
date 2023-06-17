@@ -1,8 +1,8 @@
 import React from "react";
-import search from './images/search.png'
-import cart from './images/cart.png'
-import signup from './images/signup.png'
-import "./styles/Navbar.css";
+import search from '../../assests/images/search.png'
+import cart from '../../assests/images/cart.png'
+import signup from '../../assests/images/signup.png'
+import "../../components/styles/Navbar.css";
 
 function Navbar() {
   return (
