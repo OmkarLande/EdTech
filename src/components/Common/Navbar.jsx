@@ -14,7 +14,7 @@ function Navbar() {
 
         <nav>
         <div className="title">
-          <h1>SkillHive</h1>
+          <h1><b>Skill Hive</b></h1>
         </div>
 
         <div className="navigation-menu">
