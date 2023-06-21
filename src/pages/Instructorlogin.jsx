@@ -1,13 +1,22 @@
 import React from "react";
-import loginImage from "./images/login.png";
-import "./styles/Login.css";
+import {  NavLink } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import instructorimg from "../assests/images/instructorimg.png";
 
-function login() {
+function instructourlogin() {
   return (
     <>
       <div className="login">
         <form action="" method="post">
           <h1>Welcome Back</h1>
+          <div className="logbuttons">
+            <Button variant="primary">
+              <NavLink to="/">Student</NavLink>
+            </Button>
+            <Button variant="primary" >
+             <NavLink to='/Instructorlogin'>Instructor</NavLink>
+            </Button>
+          </div>
           <label htmlFor="email-input">Email Address</label>
           <input type="email" name="email-input" id="email-input" />
 
@@ -17,11 +26,11 @@ function login() {
           <input type="submit" value="Sign In" />
         </form>
         <div className="carousal">
-          <img src={loginImage} alt="" />
+          <img src={instructorimg} alt="" />
         </div>
       </div>
     </>
   );
 }
 
-export default login;
+export default instructourlogin;
