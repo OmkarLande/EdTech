@@ -10,7 +10,7 @@ function instructourlogin() {
           <h1 className="font-lora text-2xl font-bold text-emerald-400 w-444px h-38px mt-1 ml-2 mb-3">Welcome Back</h1>
           <div className="logbuttons logbuttons flex flex-row items-start p-2 px-4 gap-1 w-220px h-44px bg-gray-400 rounded-full mt-3">
             <button variant="primary" className="flex flex-row items-center px-6 py-18 gap-10 w-30 h-10 ">
-              <NavLink to="/">Student</NavLink>
+              <NavLink to="/Login">Student</NavLink>
             </button>
             <button variant="primary" className="flex flex-row items-center px-6 py-18 gap-10 w-30 h-10 rounded-full bg-white text-emerald-400 " >
              <NavLink to='/Instructorlogin'>Instructor</NavLink>

@@ -1,0 +1,46 @@
+.firstpart {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+}
+.demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  width: 500px;
+  height: 340px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 9px 10px 20px 6px grey;
+}
+.demoimg {
+  box-shadow: 25px 25px #33beaf;
+  border-radius: 39px;
+  height: auto;
+}
+button {
+  width: 430px;
+  background-color: #33beaf;
+}
+h1 {
+  color: #33beaf;
+}
+.feauter1 {
+  border-radius: 20px;
+  box-shadow: 9px 10px 20px 6px grey;
+  margin-top: 50px;
+}
+.feauter2 {
+  border-radius: 20px;
+  box-shadow: 9px 10px 20px 6px grey;
+  margin-top: 50px;
+}
+.feauter3 {
+  border-radius: 20px;
+  box-shadow: 9px 10px 20px 6px grey;
+  margin-top: 50px;
+}
+.icon3{
+  background-color: #33beaf;
+}
