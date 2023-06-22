@@ -90,7 +90,7 @@ exports.deleteSection = async(req,res) => {
         const { sectionId } = req.params;
         //findIdAndDelete
         await Section.findByIdAndDelete(sectionId);
-        //return res
+        //return res    
         res.status(200).json({
             success: true,
             message:'Section successfully deleted',

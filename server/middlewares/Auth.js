@@ -33,7 +33,7 @@ exports.auth = async (req, res, next)=> {
             });
         }
         next();
-
+        console.log("1");
     }
     catch(error){
         return res.status(401).json({
