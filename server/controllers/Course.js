@@ -63,7 +63,7 @@ exports.createCourse = async(req,res) => {
             instructor:instrctorDetails._id,
             whatYouLearn:whatYouWillLearn,
             price,
-            category:category._id,
+            category:category,
             status:status,
             instructions:instructions,
         });

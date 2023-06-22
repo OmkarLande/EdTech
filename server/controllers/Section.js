@@ -23,7 +23,7 @@ exports.createSection = async( req , res) =>{
                                             courseId,
                                             {
                                                 $push: {
-                                                    couseContent: newSection._id,
+                                                    courseContent : newSection._id,
                                                 }
                                             },
                                             {new: true}
@@ -34,7 +34,7 @@ exports.createSection = async( req , res) =>{
                                                 path:"subSection",
                                             },
                                         })
-                                        .exeec();
+                                        .exec();
         //return res
         res.status(200).json({
             success: true,

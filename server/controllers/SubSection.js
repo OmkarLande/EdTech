@@ -37,6 +37,8 @@ exports.createSubSection = async(req,res) => {
         });
         
         //update section
+        
+
         const updatedSection = await Section.findByIdAndUpdate(
                                     { _id:sectionId },
                                     { $push: {
