@@ -9,13 +9,11 @@ const categorySchema =new mongoose.Schema({
     },
     description:{
         type:String,
-        trim:true,
-        required:true,
+        trim:true
     },
     courses:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"course",
-        required:true,
     },
 });
 

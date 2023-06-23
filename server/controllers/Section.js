@@ -23,7 +23,7 @@ exports.createSection = async( req , res) =>{
                                             courseId,
                                             {
                                                 $push: {
-                                                    couseContent: newSection._id,
+                                                    courseContent : newSection._id,
                                                 }
                                             },
                                             {new: true}
@@ -34,7 +34,7 @@ exports.createSection = async( req , res) =>{
                                                 path:"subSection",
                                             },
                                         })
-                                        .exeec();
+                                        .exec();
         //return res
         res.status(200).json({
             success: true,
@@ -90,7 +90,7 @@ exports.deleteSection = async(req,res) => {
         const { sectionId } = req.params;
         //findIdAndDelete
         await Section.findByIdAndDelete(sectionId);
-        //return res
+        //return res    
         res.status(200).json({
             success: true,
             message:'Section successfully deleted',
