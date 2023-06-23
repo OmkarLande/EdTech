@@ -2,7 +2,18 @@ import React from 'react'
 import '../components/styles/VerifyEmail.css'
 
 function VerifyEmail() {
-    const handleChange = (e) => {}
+    const handleChange = (e) => {
+      if(e.target.value.length === 1){
+        
+        try{
+          document.getElementById(Number(e.target.id) +1).focus()
+        }
+        catch(err){
+          document.getElementById(6).focus()
+        }
+      }
+      
+    }
   return (
     <>
         <div className="verify">
