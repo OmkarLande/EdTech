@@ -24,9 +24,8 @@ const courseSchema =new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:"section",
     },
-    courseContent:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"section",
+    tags:{
+        type:String,
     },
     ratingAndReviews:{
         type:mongoose.Schema.Types.ObjectId,
@@ -38,17 +37,17 @@ const courseSchema =new mongoose.Schema({
     },
     thumbnail:{
         type:String,
-        required:true,
+        
     },
-    tag:{
+    category:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"tag",
+        ref:"category",
         required:true,
     },
     studentEnrolled:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"user",
-        required:true,
+        
     },
 });
 

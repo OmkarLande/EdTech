@@ -1,26 +1,30 @@
 .login{
     display: flex;
     flex-direction: row;
-    margin: auto 40px;
 }
 .login form{
     
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 5px;
+    padding: 25px;
     width: 500px;
-    height: 400px;
-    background-color: aliceblue;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
+    box-shadow: 20px 20px 50px 15px grey;
+    
+}
+.loginimg{
+    box-shadow: 20px 20px #33BEAF;
+    border-radius: 39px;
 }
 .login form label{
-    margin-top: 5px;
+    margin-top: 25px;
 }
 .login form input{
     width: 450px;
     height: 30px;
-    margin-top: 20px;
 }
 .login form input[type="email"], .login form input[type="password"]{
     background-color: #96999E;
@@ -39,6 +43,9 @@
     background-color: #33BEAF;
     color: black;
     border-radius: 10px;
+    padding: 10px;
+    height: 40px;
+    margin-top: 30px;
 }
 
 .login .carousal{
