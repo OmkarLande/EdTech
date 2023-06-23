@@ -15,9 +15,7 @@ function App() {
   return (
     <>
       <Navbar />
-<<<<<<< HEAD
-      <VerifyEmail />
-=======
+
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
@@ -26,7 +24,6 @@ function App() {
         </Routes>
         
     </BrowserRouter>      
->>>>>>> 666be6f286124e307749d4c9d2f04ce1284e9f35
     </>
   )
 }
