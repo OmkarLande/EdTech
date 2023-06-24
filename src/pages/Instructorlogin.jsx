@@ -8,11 +8,11 @@ function instructourlogin() {
       <div className="login flex justify-center space-x-28 items-center mt-20">
         <form action="" className="" method="post">
           <h1 className="font-lora text-2xl font-bold text-emerald-400 w-444px h-38px mt-1 ml-2 mb-3">Welcome Back</h1>
-          <div className="logbuttons logbuttons flex flex-row items-start p-2 px-4 gap-1 w-220px h-44px bg-gray-400 rounded-full mt-3">
-            <button variant="primary" className="flex flex-row items-center px-6 py-18 gap-10 w-30 h-10 ">
+          <div className="logbuttons  flex flex-row bg-gray rounded-full space-x-6 ">
+            <button variant="primary" className="bg-gray  text-green m-1 ">
               <NavLink to="/Login">Student</NavLink>
             </button>
-            <button variant="primary" className="flex flex-row items-center px-6 py-18 gap-10 w-30 h-10 rounded-full bg-white text-emerald-400 " >
+            <button variant="primary" className=" bg-bg rounded-full text-bg m-1 border-0" >
              <NavLink to='/Instructorlogin'>Instructor</NavLink>
             </button>
           </div>

@@ -1,0 +1,31 @@
+
+
+.signin .carousal img {
+    width: 700px;
+    height: 600px;
+}
+.signinimg {
+    box-shadow: 20px 20px #33BEAF;
+    border-radius: 39px;
+}
+.switch{
+    width: 193px;
+}
+.switchbut{
+    width: fit-content;
+    
+}
+.phone{
+    width: 460px;
+}
+form{
+    width: 510px;
+    height:fit-content;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width:fit-content;
+    flex-direction: column;
+}

@@ -38,7 +38,9 @@
     text-decoration: none;
     color: black
 }
-
+.logbuttons button{
+    width: 120px;
+}
 .login form input[type="submit"]{
     background-color: #33BEAF;
     color: black;
