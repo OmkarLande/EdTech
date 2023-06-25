@@ -18,7 +18,7 @@ export default function Home() {
             Build skills with courses, certificates, and get online knowledge
             from our world- class platform.
           </p>
-          <button className="flex flex-row items-center justify-center px-6 py-18 gap-10 w-30 h-10 rounded-md  m-20 p-3">
+          <button className="flex flex-row items-center justify-center px-6 py-18 gap-10 w-30 h-10 rounded-md mt-20  p-3">
             Book a demo
           </button>
         </div>
@@ -29,11 +29,7 @@ export default function Home() {
       <div className="secondpart flex flex-row justify-center items-center mt-10">
         <div className="feauters flex flex-row items-center justify-center mt-10 space-x-5 ">
           <div className="feauter1 flex flex-row items-center justify-center w-90 h-150">
-            <Icon
-              icon="ri:computer-line"
-              color="white"
-              className=" bg-yellow-400 rounded-xl m-3 w-28 h-28 p-3"
-            />
+            <Icon icon="ri:computer-line" color="white" className=" icon1 rounded-xl m-3 w-28 h-28 p-3"/>
             <div className="feauter-content flex flex-col">
               <p className="font-semibold text-2xl">Best Instructor</p>
               <p className="font-normal text-lg my-3 mr-3">
@@ -45,7 +41,7 @@ export default function Home() {
             <Icon
               icon="arcticons:fiitjee-recorded-lectures"
               color="white"
-              className=" bg-red-400 rounded-xl m-3 w-28 h-28 p-3"
+              className=" icon2 rounded-xl m-3 w-28 h-28 p-3"
             />
             <div className="feauter-content flex flex-col">
               <p className="font-semibold text-2xl">Full Lectures</p>

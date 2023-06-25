@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import '../components/styles/VerifyEmail.css'
 
 function VerifyEmail() {
