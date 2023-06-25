@@ -1,15 +1,17 @@
-import React from 'react'
 import '../components/styles/VerifyEmail.css'
 
 function VerifyEmail() {
+    let otp = ""
     const handleChange = (e) => {
       if(e.target.value.length === 1){
         
         try{
+          otp += e.target.value
           document.getElementById(Number(e.target.id) +1).focus()
+
         }
         catch(err){
-          document.getElementById(6).focus()
+          console.log(otp)
         }
       }
       
