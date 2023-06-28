@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../components/styles/reset.css'
 
-const reset = () => {
+const Reset = () => {
   return (
     <div className='window'>
       <form action="">
@@ -19,4 +19,4 @@ const reset = () => {
   )
 }
 
-export default reset
+export default Reset

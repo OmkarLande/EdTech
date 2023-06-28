@@ -8,6 +8,11 @@ import Resetpassword from './pages/Resetpassword'
 import Verifyemail from './pages/Verifyemail'
 import Createpassword from './pages/Createpassword'
 import Reset from './pages/Reset'
+import MyCourses from './pages/MyCourses'
+import CourseInfo from './pages/CourseInfo'
+import CourseBuilder from './pages/CourseBuilder'
+import AddPages from './pages/AddPages'
+import Publish from './pages/Publish'
 
 
 function App() {
@@ -22,6 +27,11 @@ function App() {
           <Route path="/Verifyemail" element={<Verifyemail />}></Route>
           <Route path="/Createpassword" element={<Createpassword />}></Route>
           <Route path="/Reset" element={<Reset />}></Route>
+          <Route path="/MyCourses" element={<MyCourses />}></Route>
+          <Route path="/CourseInfo" element={<CourseInfo />}></Route>
+          <Route path="/CourseBuilder" element={<CourseBuilder />}></Route>
+          <Route path="/Addpages" element={<AddPages />}></Route>
+          <Route path="/Publish" element={<Publish />}></Route>
         </Routes>
       </BrowserRouter>      
     </>
