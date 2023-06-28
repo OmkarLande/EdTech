@@ -3,11 +3,11 @@ const  mongoose = require("mongoose");
 const profileSchema =new mongoose.Schema({
     gender:{
         type:String,
-        required:true,
+        
     },
     dateOfBirth:{
         type:String,
-        required:true,
+        
     },
     about:{
         type:String,
@@ -16,7 +16,7 @@ const profileSchema =new mongoose.Schema({
     contactNo:{
         type:Number,
         trim:true,
-        required:true,
+        
     },
     contry:{
         type:String,

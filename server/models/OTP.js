@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const mailSender = require("../utils/mailSender");
+const emailTemplate = require("../mail/Template/emailVerificationTemplate");
 
 const OTPSchema =new mongoose.Schema({
 
@@ -7,14 +8,14 @@ const OTPSchema =new mongoose.Schema({
         type:String,
         required:true,
     },
-    OTP:{
-        type:Number,
+    otp:{
+        type:String,
         required:true,
     },
     createdAt:{
         type:Date,
         default:Date.now,
-        expires:60*5. //5 min
+        expires:60*10. //10 min
     },
 });
 
@@ -23,7 +24,7 @@ async function sendVerificationEmail(email, otp){
 
     try{
         const mailResponse =await mailSender
-        (email, "Verification Email from SkillHive", otp);
+        (email, "Verification Email from SkillHive", emailTemplate(otp));
         console.log("Emaili sent successfully: " , mailResponse.response);
     }catch(error){
             console.log("Error occurred during sending the email: ",error);
