@@ -194,7 +194,7 @@ export default function Studentsignin() {
             Confirm password
           </label>
           <input
-            type={showPassword? "text" : "password"}
+            type={showConfirmPassword? "text" : "password"}
             name="confirmPassword"
             value={confirmPassword}
             onChange={handleOnChange}
