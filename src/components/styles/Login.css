@@ -30,17 +30,17 @@
     margin-top: 25px;
 }
 .login form input{
-<<<<<<< HEAD
+
     width: 100%;
     margin-right: 12px;
     margin-top: 6px;
     padding: 12px 20px;
     border: none;
     border-radius: 6px;
-=======
+
     width: 450px;
     height: 30px;
->>>>>>> eaa804359be1385b3e5f02f5e20c0843ddfd96c3
+
 }
 .login form input[type="email"], .login form input[type="password"]{
     background-color: #96999E;

@@ -1,4 +1,4 @@
-import '../components/styles/VerifyEmail.css'
+import '../components/styles/verifyemail.css'
 
 function VerifyEmail() {
     let otp = ""
