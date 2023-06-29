@@ -1,0 +1,224 @@
+body{
+    background-color: aliceblue;
+  }
+  
+  .courses{
+    display: flex;
+    flex-direction: row;
+    margin: 0 320px;
+  }
+
+ .float-child{
+    display: inline-flex;
+    padding: 40px 0;
+    margin: auto;
+  }
+  
+  .float-child button{
+    padding: 12px 20px 12px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 30px 30px 30px 30px;
+    margin-top: 90px;
+    background-color: black;
+    color: white;
+    float: left;
+  }
+  
+  .col-25{
+    float: left;
+    clear: left;
+    padding: 0 60px;
+  }
+  
+  .col-50{
+    float: left;
+    clear: left;
+    padding: 0 60px;
+  }
+  
+  .col-75{
+    float: right;
+    clear: left;
+    padding: 0 60px;
+  }
+  
+  .col-25 label{
+    float: left;
+    clear: left;
+  }
+  
+  .col-50 label{
+    float: left;
+    clear: left;
+  }
+  
+  .col-75 label{
+    float: right;
+    clear: left;
+  }
+  
+  .float-child button:hover{
+    color: #33BEAF;
+  }
+  
+  .courses h1{
+    position: absolute;
+    padding: 24px;
+    margin: 15px;
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+  
+  .courses h5{
+    position: absolute;
+    color: #96999E;
+    font-size: 1.2rem;
+  }
+  
+  span{
+    color: #33BEAF;
+  }
+
+  .Add-Course{
+    width: 820px;
+  }
+
+  .Add-Course form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    width: 800px;
+    height: 1560px;
+    background-color: #ffffff;
+    border-radius: 20px;
+  }
+
+  .tit-25{
+    display: table;
+    flex-direction: row;
+    position: relative; 
+    padding: 20px;
+  }
+
+  .tit-50{
+    display: table;
+    flex-direction: row;
+    position: relative; 
+    padding: 20px;
+  }
+
+  .tit-25 label{
+    position: relative;
+    font-size: 1.2rem;
+  }
+
+  .tit-50 label{
+    position: relative;
+    font-size: 1.2rem;
+  }
+
+  .tit-25 input[type="text"]{
+    position: relative;
+    background-color: #aaa;
+    font: 1.5rem bold;
+    padding-left: 12px;
+    width: 744px;
+    height: 70px;
+    border: none;
+    border-radius: 12px;
+  }
+
+  .tit-50 input[type="text"]{
+    position: relative;
+    background-color: #aaa;
+    font: 1.5rem bold;
+    padding-left: 12px;
+    width: 744px;
+    height: 160px;
+    border: none;
+    border-radius: 12px;
+  }
+
+  textarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #aaa;
+    color: #ffffff;
+    padding-left: 12px;
+    width: 744px;
+    height: 240px;
+    border: none;
+    border-radius: 12px;
+  }
+
+  textarea::-webkit-input-placeholder{
+    color: #ffffff;
+    padding: 84px 156px;
+    font: 1.4rem bold;
+    font-family: "Calibri";
+  }
+
+  .Add-Course form button{
+    position: relative;
+    background-color: transparent;
+    color: #33BEAF;
+    padding: 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .Add-Course .next{
+    position: relative;
+    background-color: #33BEAF;
+    color: #000;
+    font-size: 1.2rem;
+    margin: 150px 450px;
+    width: 110px;
+    height: 60px;
+    border: none;
+    border-radius: 4px 4px;
+    box-shadow: 4px 2px 4px 2px #96999E;
+  }
+  
+.next label{
+  cursor: pointer;
+}
+
+.grid-child{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-child form{
+  width: 50%;
+  padding: 20px;
+  margin-top: 90px;
+  float: left;
+  background-color: #fff;
+  width: 600px;
+  height: 700px;
+  border: none;
+  border-radius: 12px 12px;
+}
+
+.grid-child form h2{
+    margin: 25px 26px;
+    padding: 12px 30px;
+    font-size: 2.22rem;
+    font-weight: bold;
+}
+
+.grid-child form .imp{
+  margin: auto 12px;
+  padding: 12px 20px;
+}
+
+.grid-child form .imp li{
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}

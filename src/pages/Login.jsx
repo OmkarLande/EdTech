@@ -2,13 +2,7 @@ import { React } from "react";
 import {  NavLink } from "react-router-dom";
 import loginImage from "../../src/assests/images/login.png";
 import "../components/styles/Login.css";
-// import Instructorlogin from './Instructorlogin';
-import { useState } from "react"
-import { useDispatch } from "react-redux"
-import { Link, useNavigate } from "react-router-dom"
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-import { login } from "../services/Operation/authApi"
-
+import Instructorlogin from './Instructorlogin';
 
 export default function Login() {
  
@@ -50,24 +44,12 @@ export default function Login() {
              <NavLink to='/Instructorlogin'>Instructor</NavLink>
             </button>
           </div>
-          <label htmlFor="email-input" className="text-sm text-bgfont-semibold" >Email Address</label>
-          <input type="email" name="email-input" id="email-input" placeholder="Enter email address" onChange={handleOnChange} className="placeholder:text-white p-2 py-4 rounded-md"/>
+          <label htmlFor="email-input" className="text-sm font-semibold" >Email Address</label>
+          <input type="email" name="email-input" id="email-input" placeholder="Enter email address" className="placeholder:text-white p-2 py-4 rounded-md"/>
           <label htmlFor="password" className="text-sm font-semibold">Password</label>
-          <input type="password" id="password" placeholder="Enter Password" onChange={handleOnChange} className="placeholder:text-white p-2 py-4 rounded-md"/>
-          <span
-          onClick={() => setShowPassword((prev) => !prev)}
-          className="absolute right-3 top-[38px] z-[10] cursor-pointer"
-        >
-          {showPassword ? (
-            <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
-          ) : (
-            <AiOutlineEye fontSize={24} fill="#AFB2BF" />
-          )}
-        </span>
-          <Link to="/forgetPassword">
-            <p  className="text-sm font-semibold">Forgot Password?</p>
-            </Link>
-          <button type="submit" value="Sign In" />
+          <input type="password" id="password" placeholder="Enter Password" className="placeholder:text-white p-2 py-4 rounded-md"/>
+          <a href="" className="text-sm font-semibold">Forgot Password?</a>
+          <input type="submit" value="Sign In" />
         </form>
         <div className="carousal">
           <img src={loginImage} alt="" className="loginimg" />

@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from "../components/Common/Sidebar";
+import Sidebar2 from "../components/Common/Sidebar2";
 import "../components/styles/profile.css";
 import Instprofile from "../assests/images/instprofile.png"
 import { NavLink } from "react-router-dom";
@@ -8,7 +8,7 @@ export default function Instructorprofile() {
   return (
     <>
       <div className="flex flex-row ">
-        <Sidebar />
+        <Sidebar2 />
         <div className="content m-3 ">
           <p className="text-sm font-noraml text-gray mt-2">
             Home / Dashboard/ My profile

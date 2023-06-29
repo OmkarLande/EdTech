@@ -1,0 +1,167 @@
+.body{
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+.courses{
+    display: flex;
+    flex-direction: row;
+  }
+
+ .float-child{
+    display: inline-flex;
+    padding: 40px 0;
+    margin: auto;
+  }
+  
+  .float-child button{
+    padding: 12px 20px 12px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 30px 30px 30px 30px;
+    margin-top: 90px;
+    background-color: black;
+    color: white;
+    float: left;
+  }
+  
+  .col-25{
+    float: left;
+    clear: left;
+    padding: 0 60px;
+  }
+  
+  .col-50{
+    float: left;
+    clear: left;
+    padding: 0 60px;
+  }
+  
+  .col-75{
+    float: right;
+    clear: left;
+    padding: 0 60px;
+  }
+  
+  .col-25 label{
+    float: left;
+    clear: left;
+  }
+  
+  .col-50 label{
+    float: left;
+    clear: left;
+  }
+  
+  .col-75 label{
+    float: right;
+    clear: left;
+  }
+  
+  .float-child button:hover{
+    color: #33BEAF;
+  }
+  
+  .courses h1{
+    position: absolute;
+    padding: 24px;
+    margin: 15px;
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+  
+  .courses h5{
+    position: absolute;
+    color: #96999E;
+    font-size: 1.2rem;
+  }
+
+  span{
+    color: #33BEAF;
+  }
+
+  #touch{
+    display: inline-flex;
+    width: 800px;
+    height: 180px;
+  }
+
+  .courses #touch h1{
+    position: relative;
+    font: 2.2rem bold;
+    padding: 20px 40px;
+    color: #000;
+  }
+
+
+  .courses #touch .lab{
+    display: inline-block;
+    margin-left: 50px;
+    font: 1.45rem bold;
+  }
+
+  .courses #touch .lab input[type=checkbox]{
+    position: relative;
+    margin: 8px 8px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .courses form .press{
+    display: inline-flex;
+    padding: 40px 0;
+  }
+
+  .courses form .press .row-10{
+    position: relative;
+    height: 40px;
+    width: 60px;
+  }
+
+  .courses form .press .row-15{
+    position: relative;
+    margin-left: 370px;
+    height: 60px;
+    width: 130px;
+  }
+
+  .courses form .press .row-20{
+    position: relative;
+    margin-left: 50px;
+    height: 60px;
+    width: 130px;
+  }
+
+  .press .row-10 button{
+    background-color: #000;
+    color: #ffffff;
+    border-radius: 8px;
+    font: 1.2rem bold;
+    padding: 20px;
+    width: 160px;
+    height: 70px;
+    box-shadow: 1px 2px 1px 2px #96999E;
+  }
+
+
+  .press .row-15 button{
+    background-color: #000;
+    color: #ffffff;
+    border-radius: 8px;
+    font: 1.2rem bold;
+    padding: 20px;
+    width: 160px;
+    height: 70px;
+    box-shadow: 1px 2px 1px 2px #96999E;
+  }
+  
+  .press .row-20 button{
+    background-color: #33BEAF;
+    color: #000;
+    border-radius: 8px;
+    font: 1.2rem bold;
+    padding: 20px;
+    width: 180px;
+    height: 70px;
+    box-shadow: 1px 2px 1px 2px #96999E;
+  }

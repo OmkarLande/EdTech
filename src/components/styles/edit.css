@@ -1,0 +1,54 @@
+.part1 {
+  box-shadow: 1px 0px 20px 3px grey;
+  width: 1070px;
+}
+.part2 {
+  box-shadow: 1px 0px 20px 3px grey;
+  width: 1070px;
+}
+.part3 {
+  box-shadow: 1px 0px 20px 3px grey;
+  width: 1070px;
+}
+.part4 {
+  box-shadow: 1px 0px 20px 3px grey;
+  width: 1070px;
+}
+.part5 {
+  box-shadow: 1px 0px 20px 3px grey;
+  width: 1070px;
+  
+}
+.date{
+    width:max-content;
+    background-color: #96999E;
+    border-radius: 10px;
+    border:transparent;
+    color: white;
+}
+.react-date-picker__button{
+    width: fit-content;
+    color: white;
+}
+.react-date-picker__wrapper{
+    border:none;
+    width: 24rem;
+    color: white;
+}
+.phonecall{
+    width: 270px;
+}
+.select{
+ background-color: #96999E;
+ color: white;
+}
+.messagebox{
+    width: 390px;
+    padding: auto;
+    margin: auto;
+    background-color: #96999E;
+    color: white;
+}
+.password{
+    width: 390px;
+}

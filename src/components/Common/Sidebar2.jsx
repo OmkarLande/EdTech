@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import {
   Card,
   List,
@@ -9,7 +9,7 @@ import {
 import "../styles/sidebar.css"
 import { Icon } from "@iconify/react";
 
-export default function Sidebar() {
+export default function Sidebar2() {
   return (
     <div className="flex flex-col justify-between">
       <Card className=" bar w-full max-w-[20rem]  pr-20 shadow-xl shadow-blue-gray-900/5 border-2 rounded-s-lg">
@@ -23,30 +23,18 @@ export default function Sidebar() {
             </ListItem>
             <ListItem>
               <ListItemPrefix>
-                <Icon icon="ri:book-line" className="h-5 w-5 m-1" />
-              </ListItemPrefix>
-              Enrolled Courses
-            </ListItem>
-            <ListItem>
-              <ListItemPrefix>
-                <Icon icon="mingcute:bookmark-line" className="h-5 w-5 m-1" />
-              </ListItemPrefix>
-              WishList
-            </ListItem>
-            <ListItem>
-              <ListItemPrefix>
-                <Icon icon="grommet-icons:cart" className="h-5 w-5 m-1" />
-              </ListItemPrefix>
-              Purchase History
-            </ListItem>
-            <ListItem>
-              <ListItemPrefix>
                 <Icon
                   icon="solar:square-academic-cap-linear"
                   className="h-5 w-5 m-1"
                 />
               </ListItemPrefix>
-              Courses
+              My Courses
+            </ListItem>
+            <ListItem>
+              <ListItemPrefix>
+                <Icon icon="mingcute:add-fill" className="h-5 w-5 m-1" />
+              </ListItemPrefix>
+              Add Courses
             </ListItem>
           </div>
           <div className="">
@@ -66,5 +54,5 @@ export default function Sidebar() {
         </List>
       </Card>
     </div>
-  );
+  )
 }
