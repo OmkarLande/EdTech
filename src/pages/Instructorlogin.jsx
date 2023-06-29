@@ -49,11 +49,11 @@ function instructourlogin() {
              <NavLink to='/Instructorlogin'>Instructor</NavLink>
             </button>
           </div>
-          <label htmlFor="email-input" className="text-sm font-semibold">Email Address</label>
-          <input type="email" name="email-input" id="email-input" placeholder="Enter email address" onChange={handleOnChange} className="placeholder:text-white p-2 py-4 rounded-md"/>
+          <label className="text-sm font-semibold">Email Address</label>
+          <input type="text" name="email" value={email} id="email" placeholder="Enter email address" onChange={handleOnChange} className="placeholder:text-white p-2 py-4 rounded-md"/>
 
           <label htmlFor="password" className="text-sm font-semibold">Password</label>
-          <input type="password" id="password" placeholder="Enter Password" onChange={handleOnChange} className="placeholder:text-white p-2 py-4 rounded-md"/>
+          <input type={showPassword? "text" : "password"} name="password" value={password} id="password" placeholder="Enter Password" onChange={handleOnChange} className="placeholder:text-white p-2 py-4 rounded-md"/>
           <span
           onClick={() => setShowPassword((prev) => !prev)}
           className="absolute right-3 top-[38px] z-[10] cursor-pointer"

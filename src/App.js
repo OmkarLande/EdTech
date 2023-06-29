@@ -9,6 +9,9 @@ import Instructorsignin from './pages/Istructorsignin'
 import Studentprofile from './pages/Studentprofile'
 import Instructorprofile from './pages/Instructorprofile'
 import Home from './pages/Home'
+import Resetpassword from "./pages/Resetpassword"
+
+
 
 function App() {
   return (
@@ -23,6 +26,8 @@ function App() {
         <Route path="/Studentprofile" element={<Studentprofile />}></Route>
         <Route path="/Instructorprofile" element={<Instructorprofile />}></Route>
         <Route path="/VerifyEmail" element={<VerifyEmail />}></Route>
+        <Route path="/forgetPassword" element={<Resetpassword />}></Route>
+
        </Routes>
         
     

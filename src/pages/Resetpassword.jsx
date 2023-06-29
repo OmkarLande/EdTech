@@ -2,7 +2,7 @@ import {React} from 'react';
 import { NavLink } from "react-router-dom";
 import '../components/styles/Resetpassword.css';
 
-const Resetpassword = () => {
+function Resetpassword ()  {
   return (
     <>
     <div className="title">
