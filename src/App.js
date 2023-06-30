@@ -27,53 +27,53 @@ function App() {
         <Route
           path="/Instructorlogin"
           element={
-            <OpenRoute>
+            
               <Instructorlogin />
-            </OpenRoute>
+            
           }
         />
         
         <Route
           path="/Login"
           element={
-            <OpenRoute>
+            
               <Login />
-            </OpenRoute>
+            
           }
         />
 
         <Route
           path="/Studentsignin"
           element={
-            <OpenRoute>
+            
               <Studentsignin />
-            </OpenRoute>
+            
           }
         />
         <Route
           path="/Instructorsignin"
           element={
-            <OpenRoute>
+            
               <Instructorsignin />
-            </OpenRoute>
+            
           }
         />
 
     <Route
           path="/forgetPassword"
           element={
-            <OpenRoute>
+            
               <Resetpassword />
-            </OpenRoute>
+            
           }
         />  
 
       <Route
           path="/VerifyEmail"
           element={
-            <OpenRoute>
+            
               <VerifyEmail />
-            </OpenRoute>
+
           }
         />   
 
