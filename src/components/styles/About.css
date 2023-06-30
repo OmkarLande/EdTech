@@ -1,0 +1,51 @@
+.c1{
+    font-size: 60px;
+    font-family: 'lora';
+    text-align: center;
+}
+
+.img-list-1{
+    display: inline-flex;
+}
+.img-list-1 li{
+    margin: 5px;
+}
+.img-list-1 li img{
+    width: 300px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+
+.moto{
+    text-align: center;
+    font-family: 'lora';
+}
+.moto h3{
+    font-size: 40px;
+
+}
+.visions{
+    display: inline-flex;
+    margin-top: 200px;
+    font-family: 'roboto';
+    
+}
+.our-vision, .our-mission{
+    text-align: justify;
+    margin: 10px;
+    width: 400px;
+    height: 200px;
+    padding: 30px;
+}
+.our-vision h2, .our-mission h2{
+    font-weight: bolder;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.our-vision h2{
+    color: #E56E18;
+}
+.our-mission h2{
+    color: #1FA2FF;
+}
