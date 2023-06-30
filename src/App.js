@@ -9,24 +9,13 @@ import Instructorsignin from './pages/Istructorsignin'
 import Studentprofile from './pages/Studentprofile'
 import Instructorprofile from './pages/Instructorprofile'
 import Home from './pages/Home'
+import InstructorDetails from './pages/InstructorDetails'
 
 function App() {
   return (
     <>
       <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path="/Login" element={<Login />}></Route>
-          <Route path="/Instructorlogin" element={<Instructorlogin />}></Route>
-          <Route path="/Studentsignin" element={<Studentsignin />}></Route>
-          <Route path="/Instructorsignin" element={<Instructorsignin />}></Route>
-          <Route path="/Studentprofile" element={<Studentprofile />}></Route>
-          <Route path="/Instructorprofile" element={<Instructorprofile />}></Route>
-          <Route path="/VerifyEmail" element={<VerifyEmail />}></Route>
-        </Routes>
-        
-    </BrowserRouter>      
+      <InstructorDetails />
     </>
   )
 }
