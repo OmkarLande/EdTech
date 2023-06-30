@@ -14,7 +14,7 @@ const Resetpassword = () => {
           <input type="text" placeholder="Enter Email Address" />
         </div>
         <div className="click">
-          <NavLink to="/Verifyemail"><input type="Submit" Value="Reset Your Password"/></NavLink>
+          <NavLink to="/Checkemail"><input type="Submit" Value="Reset Your Password"/></NavLink>
         </div>
         <div className="return">
           <NavLink to="/">Back to Login</NavLink>

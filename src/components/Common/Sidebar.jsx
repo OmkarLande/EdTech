@@ -9,7 +9,7 @@ import {
 import "../styles/sidebar.css"
 import { Icon } from "@iconify/react";
 
-export default function Sidebar() {
+function Sidebar() {
   return (
     <div className="flex flex-col justify-between">
       <Card className=" bar w-full max-w-[20rem]  pr-20 shadow-xl shadow-blue-gray-900/5 border-2 rounded-s-lg">
@@ -49,7 +49,7 @@ export default function Sidebar() {
               Courses
             </ListItem>
           </div>
-          <div className="">
+          <div className="list">
             <ListItem>
               <ListItemPrefix>
                 <Icon icon="uil:setting" className="h-5 w-5 m-1" />
@@ -68,3 +68,5 @@ export default function Sidebar() {
     </div>
   );
 }
+
+export default Sidebar;

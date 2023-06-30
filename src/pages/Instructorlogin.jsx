@@ -21,7 +21,7 @@ function instructourlogin() {
 
           <label htmlFor="password" className="text-sm font-semibold">Password</label>
           <input type="password" id="password" placeholder="Enter Password" className="placeholder:text-white p-2 py-4 rounded-md"/>
-          <a href="" className="text-sm font-semibold">Forgot Password?</a>
+          <NavLink to="/Resetpassword"><a href="" className="text-sm font-semibold">Forgot Password?</a></NavLink>
           <input type="submit" value="Sign In" />
         </form>
         <div className="carousal">

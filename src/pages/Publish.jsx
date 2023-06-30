@@ -1,9 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../components/styles/Publish.css'
+import Sidebar2 from '../components/Common/Sidebar2'
 
 const Publish = () => {
   return (
+    <>
+    <Sidebar2 />
     <div className='courses'>
       <form action="">
       <h5>Home / Dashboard / <span> My Courses</span></h5>
@@ -11,19 +14,19 @@ const Publish = () => {
         <div className="Add-Course">
           <div className="float-child">
           <div className="col-25">
-              <button>
+              <button className='onclick'>
                <NavLink to='/CourseInfo'>1</NavLink>
               </button>
               <label htmlFor="">Course Info</label>
           </div>
               <div className="col-50">
-              <button>
+              <button className='onclick'>
                <NavLink to='/CourseBuilder'>2</NavLink>
               </button>
               <label htmlFor="">Course Builder</label>
           </div>
               <div className="col-75">
-              <button>
+              <button className='onclick'>
                <NavLink to='/Publish'>3</NavLink>
               </button>
               <label htmlFor="">Publish</label>
@@ -68,7 +71,8 @@ const Publish = () => {
           </form>
         </div>
     </div>
-  )
+    </>
+  );
 }
 
 export default Publish
