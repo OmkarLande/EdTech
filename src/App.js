@@ -10,6 +10,7 @@ import Studentprofile from './pages/Studentprofile'
 import Instructorprofile from './pages/Instructorprofile'
 import Home from './pages/Home'
 import Resetpassword from "./pages/Resetpassword"
+import About from './pages/About'
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/Instructorprofile" element={<Instructorprofile />}></Route>
         <Route path="/VerifyEmail" element={<VerifyEmail />}></Route>
         <Route path="/forgetPassword" element={<Resetpassword />}></Route>
+        <Route path="/About" element={<About/>}></Route>
 
        </Routes>
         
