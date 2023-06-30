@@ -17,19 +17,19 @@ function Navbar() {
   const { totalItems } = useSelector((state) => state.cart)
   const location = useLocation()
 
-  const [ subLinks, setSubLinks ] = useState([])
+  const [  setSubLinks ] = useState([])
   const [loading, setLoading] = useState(false)
 
-//   const subLinks = [
-//     {
-//         title: "python",
-//         link:"/catalog/python"
-//     },
-//     {
-  //         title: "web dev",
-//         link:"/catalog/web-development"
-//     },
-// ];
+  const subLinks = [
+    {
+        title: "python",
+        link:"/catalog/python"
+    },
+    {
+          title: "web dev",
+        link:"/catalog/web-development"
+    },
+];
 
 
 useEffect(() => {
@@ -135,7 +135,7 @@ useEffect(() => {
          <div className="hidden items-center gap-x-4 md:flex">
           {user && user?.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
             <Link to="/dashboard/cart" className="relative">
-              <AiOutlineShoppingCart className="text-2xl text-richblack-100" />
+              <AiOutlineShoppingCart className="text-2xl text-text" />
               {totalItems > 0 && (
                 <span className="absolute -bottom-2 -right-2 grid h-5 w-5 place-items-center overflow-hidden rounded-full bg-bg text-center text-xs font-bold text-green">
                   {totalItems}
@@ -160,7 +160,7 @@ useEffect(() => {
           {token !== null && <ProfileDropDown />}
         </div>
         <button className="mr-4 md:hidden">
-          <AiOutlineMenu fontSize={24} fill="#ffffff" />
+          <AiOutlineMenu fontSize={24} fill="#000000" />
         </button> 
       </div>
     </div>

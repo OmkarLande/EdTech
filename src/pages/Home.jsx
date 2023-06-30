@@ -23,7 +23,7 @@ export default function Home() {
           </button>
         </div>
         <div className="caurosal">
-          <img src={Demoimg} className="demoimg" />
+          <img src={Demoimg} alt="demonimg" className="demoimg" />
         </div>
       </div>
       <div className="secondpart flex flex-row justify-center items-center mt-10">

@@ -58,6 +58,7 @@ export default function Studentsignin() {
     // Setting signup data to state
     // To be used after otp verification
     dispatch(setSignupData(signupData))
+    console.log("sign");
     // Send OTP to user for verification
     dispatch(sendOtp(formData.email, navigate))
 
@@ -134,7 +135,7 @@ export default function Studentsignin() {
               type="tel"
               id="phone"
               className="phone bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-bg dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
-              placeholder="9000-----0"
+              placeholder="987654321"
               //pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
               required
             />
