@@ -13,6 +13,7 @@ import Resetpassword from "./pages/Resetpassword"
 import About from './pages/About'
 import ResendEmail from "./pages/Reset"
 import OpenRoute from './components/core/Auth/OpenRoute'
+import Createpassword from './pages/Createpassword'
 
 function App() {
   return (
@@ -67,6 +68,12 @@ function App() {
             
           }
         />  
+        <Route 
+          path='/update-password/:id'
+          element={
+            <Createpassword/>
+          }
+        />
 
       <Route
           path="/VerifyEmail"
