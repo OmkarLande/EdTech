@@ -132,7 +132,7 @@ useEffect(() => {
           </ul>
         </nav>
         {/* Login / Signup / Dashboard */}
-         <div className="hidden items-center gap-x-4 md:flex">
+        <div className="hidden items-center gap-x-4 md:flex">
           {user && user?.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
             <Link to="/dashboard/cart" className="relative">
               <AiOutlineShoppingCart className="text-2xl text-text" />
@@ -143,6 +143,7 @@ useEffect(() => {
               )}
             </Link>
           )}
+          
           {token === null && (
             <Link to="/Login">
               <button className="w-[78px] h-10 px-3 py-2 bg-bg rounded-lg justify-center items-center gap-2 inline-flex text-center text-text text-[16px] border-1 border-text leading-normal">
@@ -152,8 +153,8 @@ useEffect(() => {
           )}
           {token === null && (
             <Link to="/Studentsignin">
-              <button className="w-[78px] h-10 px-3 py-2 bg-green rounded-lg justify-center items-center gap-2 inline-flex text-center text-bg text-[16px] font-bold leading-6 shrink-0 whitespace-nowrap	">
-              Sign up
+              <button className="w-[78px] h-10 px-3 py-2 bg-green rounded-lg justify-center items-center gap-2 inline-flex text-center text-bg text-[16px] font-bold leading-6 shrink-0 whitespace-nowrap">
+                Sign up
               </button>
             </Link>
           )}
@@ -161,8 +162,9 @@ useEffect(() => {
         </div>
         <button className="mr-4 md:hidden">
           <AiOutlineMenu fontSize={24} fill="#000000" />
-        </button> 
+        </button>
       </div>
+
     </div>
   )
 }
