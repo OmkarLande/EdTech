@@ -16,7 +16,7 @@
     
 }
 .phone{
-    width: 460px;
+    width: 460px !important;
 }
 form{
     width: 510px;

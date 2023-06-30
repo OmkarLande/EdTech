@@ -3,10 +3,79 @@ import Studentsigninimg from "../assests/images/studentsignin.png";
 import "../components/styles/signin.css";
 import { NavLink } from "react-router-dom";
 
+import { useState } from "react"
+import { toast } from "react-hot-toast"
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
+import { useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
+
+import { sendOtp } from "../services/Operation/authApi"
+import { setSignupData } from "../slices/authSlice"
+import { ACCOUNT_TYPE } from "../utils/constants"
+
 export default function Studentsignin() {
+
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  // student or instructor
+  const [accountType, setAccountType] = useState(ACCOUNT_TYPE.STUDENT)
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  })
+
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+
+  const { firstName, lastName, email, password, confirmPassword } = formData
+
+  // Handle input fields, when some value changes
+  const handleOnChange = (e) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [e.target.name]: e.target.value,
+    }))
+  }
+
+  // Handle Form Submission
+  const handleOnSubmit = (e) => {
+    e.preventDefault()
+
+    if (password !== confirmPassword) {
+      toast.error("Passwords Do Not Match")
+      return
+    }
+    const signupData = {
+      ...formData,
+      accountType,
+    }
+
+    // Setting signup data to state
+    // To be used after otp verification
+    dispatch(setSignupData(signupData))
+    // Send OTP to user for verification
+    dispatch(sendOtp(formData.email, navigate))
+
+    // Reset
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    })
+    setAccountType(ACCOUNT_TYPE.STUDENT)
+  }
+  
+
   return (
     <div className="signin flex justify-center items-start space-x-28  mt-20">
-      <form className=" shadow-lg shadow-slate-400 p-6 rounded-3xl">
+      <form onSubmit={handleOnSubmit} className=" shadow-lg shadow-slate-400 p-6 rounded-3xl">
         <h1 className="text-text font-bold text-3xl mb-2">Join the millions learning to code with SkillHive.</h1>
         <p className="text-gray font-normal text-xl mb-5">Build skills for today, tomorrow, and beyond. </p>
         <div className="switch flex flex-row bg-gray rounded-full space-x-6">
@@ -20,14 +89,17 @@ export default function Studentsignin() {
         <div className="grid gap-6 mb-6 md:grid-cols-2 mt-5">
           <div>
             <label
-              for="first_name"
+              name="first_name"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               First name
             </label>
             <input
               type="text"
+              value={firstName}
+              name="firstName"
               id="first_name"
+              onChange={handleOnChange}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-bg dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Enter first name"
               required
@@ -42,6 +114,9 @@ export default function Studentsignin() {
             </label>
             <input
               type="text"
+              name="lastName"
+              value={lastName}
+              onChange={handleOnChange}
               id="last_name"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-bg dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Enter last name"
@@ -55,12 +130,12 @@ export default function Studentsignin() {
             >
               Phone number
             </label>
-            <input
+            <input 
               type="tel"
               id="phone"
               className="phone bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-bg dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
-              placeholder="1234567890"
-              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+              placeholder="9000-----0"
+              //pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
               required
             />
           </div>
@@ -73,7 +148,10 @@ export default function Studentsignin() {
             Email address
           </label>
           <input
-            type="email"
+            type="text"
+            name="email"
+            value={email}
+            onChange={handleOnChange}
             id="email"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-bg  dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="enter email-address"
@@ -85,15 +163,28 @@ export default function Studentsignin() {
             for="password"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Password
+            Create Password
           </label>
           <input
-            type="password"
+            type={showPassword? "text" : "password"}
+            name="password"
+            value={password}
+            onChange={handleOnChange}
             id="password"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-bg dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Enter password"
             required
           />
+          <span
+              onClick={() => setShowPassword((prev) => !prev)}
+              className="absolute right-3 top-[38px] z-[10] cursor-pointer"
+            >
+              {showPassword ? (
+                <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
+              ) : (
+                <AiOutlineEye fontSize={24} fill="#AFB2BF" />
+              )}
+            </span>
         </div>
         <div className="mb-6">
           <label
@@ -103,21 +194,34 @@ export default function Studentsignin() {
             Confirm password
           </label>
           <input
-            type="password"
+            type={showConfirmPassword? "text" : "password"}
+            name="confirmPassword"
+            value={confirmPassword}
+            onChange={handleOnChange}
             id="confirm_password"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-bg dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="confirm password"
             required
           />
+          <span
+              onClick={() => setShowConfirmPassword((prev) => !prev)}
+              className="absolute right-3 top-[38px] z-[10] cursor-pointer"
+            >
+              {showConfirmPassword ? (
+                <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
+              ) : (
+                <AiOutlineEye fontSize={24} fill="#AFB2BF" />
+              )}
+            </span>
         </div>
         <div className="submit">
           <button type="submit" className=" bg-green ">
             Create Account
           </button>
         </div>
-        <a href="" className="text-sm font-noraml text-gray mt-2">
+        <p className="text-sm font-noraml text-gray mt-2">
           <NavLink to="/Login">Already have an account ?</NavLink>
-        </a>
+        </p>
       </form>
       <div className="carousal">
         <img src={Studentsigninimg} alt="" className="signinimg" />

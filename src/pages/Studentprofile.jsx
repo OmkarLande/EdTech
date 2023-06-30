@@ -31,7 +31,7 @@ export default function Studentprofile() {
               </div>
               <div>
                 <button className="Edit bg-green  text-bg m-1  w-full px-4">
-                  <NavLink to="">Edit</NavLink>
+                  <NavLink to="/Studenteditprofile">Edit</NavLink>
                 </button>
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function Studentprofile() {
                 <div>
                   {" "}
                   <button className="Edit bg-green  text-bg m-1  w-full px-4">
-                    <NavLink to="">Edit</NavLink>
+                    <NavLink to="/Studenteditprofile">Edit</NavLink>
                   </button>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function Studentprofile() {
                 <div>
                   {" "}
                   <button className="Edit bg-green  text-bg m-1  w-full px-4">
-                    <NavLink to="">Edit</NavLink>
+                    <NavLink to="/Studenteditprofile">Edit</NavLink>
                   </button>
                 </div>
               </div>
