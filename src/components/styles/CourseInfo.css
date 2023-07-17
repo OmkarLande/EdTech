@@ -2,26 +2,31 @@ body{
     background-color: aliceblue;
   }
   
-  .courses{
+  .display{
     display: flex;
     flex-direction: row;
-    margin: 0 320px;
+    margin: auto;
+    top: -52rem;
+    left: 22rem;
+    position: relative;
   }
 
  .float-child{
     display: inline-flex;
-    padding: 40px 0;
+    padding: 1rem 2rem;
     margin: auto;
   }
-  
-  .float-child button{
-    padding: 12px 20px 12px 20px;
-    border: 2px solid #ffffff;
-    border-radius: 30px 30px 30px 30px;
-    margin-top: 90px;
-    background-color: black;
-    color: white;
-    float: left;
+
+  .onclick{
+    display: inline;
+    position: relative;
+    border-radius: 6rem;
+    background-color: #000000;
+    color: #ffffffff;
+    top: -10%;
+    width: 4.4rem;
+    height: 4.4rem;
+    margin-top: 7rem;
   }
   
   .col-25{
@@ -61,7 +66,7 @@ body{
     color: #33BEAF;
   }
   
-  .courses h1{
+  .display h1{
     position: absolute;
     padding: 24px;
     margin: 15px;
@@ -69,7 +74,7 @@ body{
     font-weight: bold;
   }
   
-  .courses h5{
+  .display h5{
     position: absolute;
     color: #96999E;
     font-size: 1.2rem;
@@ -92,6 +97,7 @@ body{
     height: 1560px;
     background-color: #ffffff;
     border-radius: 20px;
+    margin-top: 2rem;
   }
 
   .tit-25{
@@ -187,14 +193,13 @@ body{
   cursor: pointer;
 }
 
-.grid-child{
-  display: inline-block;
+.Tips-form{
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
-.grid-child form{
-  width: 50%;
+.Tips-form form{
   padding: 20px;
   margin-top: 90px;
   float: left;
@@ -205,19 +210,19 @@ body{
   border-radius: 12px 12px;
 }
 
-.grid-child form h2{
+.Tips-form form h2{
     margin: 25px 26px;
     padding: 12px 30px;
     font-size: 2.22rem;
     font-weight: bold;
 }
 
-.grid-child form .imp{
+.Tips-form form .imp{
   margin: auto 12px;
   padding: 12px 20px;
 }
 
-.grid-child form .imp li{
+.Tips-form form .imp li{
   padding: 8px 12px;
   font-size: 1.2rem;
   font-weight: bolder;

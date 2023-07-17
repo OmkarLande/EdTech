@@ -1,28 +1,31 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../components/styles/CourseBuilder.css'
+import Sidebar2 from '../components/Common/Sidebar2'
 
 const CourseBuilder = () => {
   return (
-      <div className='courses'>
+    <>
+    <Sidebar2 />
+    <div className='courses'>
        <h5>Home / Dashboard / <span> My Courses</span></h5>
        <h1>My Courses</h1>
         <div className="Add-Course">
           <div className="float-child">
           <div className="col-25">
-              <button>
+              <button className='onclick'>
                <NavLink to='/CourseInfo'>1</NavLink>
               </button>
               <label htmlFor="">Course Info</label>
           </div>
               <div className="col-50">
-              <button>
+              <button className='onclick'>
                <NavLink to='/CourseBuilder'>2</NavLink>
               </button>
               <label htmlFor="">Course Builder</label>
           </div>
               <div className="col-75">
-              <button>
+              <button className='onclick'>
                <NavLink to='/Publish'>3</NavLink>
               </button>
               <label htmlFor="">Publish</label>
@@ -58,7 +61,7 @@ const CourseBuilder = () => {
                 <NavLink to="/AddPages"><input id='next' type="button" value="Next"/></NavLink>
             </div>
         </div>
-        <div className="grid-child">
+        <div className="Tips-form">
           <form action="" method='post'>
             <h2>Course Upload Tips</h2>
             <div className="imp">
@@ -74,7 +77,8 @@ const CourseBuilder = () => {
           </form>
         </div>
     </div>
-  )
+    </>  
+  );
 }
 
 export default CourseBuilder

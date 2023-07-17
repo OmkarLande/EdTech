@@ -53,6 +53,7 @@ function instructourlogin() {
           <input type="text" name="email" value={email} id="email" placeholder="Enter email address" onChange={handleOnChange} className="placeholder:text-white p-2 py-4 rounded-md"/>
 
           <label htmlFor="password" className="text-sm font-semibold">Password</label>
+<<<<<<< HEAD
           <input type={showPassword? "text" : "password"} name="password" value={password} id="password" placeholder="Enter Password" onChange={handleOnChange} className="placeholder:text-white p-2 py-4 rounded-md"/>
           <span
           onClick={() => setShowPassword((prev) => !prev)}
@@ -68,6 +69,11 @@ function instructourlogin() {
             <p className="text-sm font-semibold">Forgot Password?</p>
             </Link>
           <button type="submit" value="Sign In" />
+=======
+          <input type="password" id="password" placeholder="Enter Password" className="placeholder:text-white p-2 py-4 rounded-md"/>
+          <NavLink to="/Resetpassword"><a href="" className="text-sm font-semibold">Forgot Password?</a></NavLink>
+          <input type="submit" value="Sign In" />
+>>>>>>> 06a3f5e235a4ca282667552c1a375f24cc598fbd
         </form>
         <div className="carousal">
           <img src={instructorimg} alt="" className="loginimg"/>

@@ -1,0 +1,57 @@
+.body{
+    background-color: var(--aliceblue-gradient);
+}
+
+.header h1{
+    justify-content: flex-start;
+    position: relative;
+    font-size: 2.8rem;
+    font-weight: 500;
+    font-family: "Algerian";
+    padding-bottom: 1rem;
+}
+
+.header{
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header .text{
+    position: relative;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 1.2rem;
+    font-family: "Times New Roman";
+}
+
+.echo{
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    margin-top: 12rem;
+    margin-left: 40rem;
+    outline: none;
+    border: none;
+    border-radius: 2.2rem;
+    width: 45rem;
+    height: 22rem;
+    box-shadow: 8px 8px 8px 8px #666666;
+}
+
+.header .clickto{
+    position: relative;
+    margin-top: 1.2rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    box-shadow: 8px 8px 8px 8px #666666;
+}
+
+.echo .return{
+    display: inline-flex;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    margin-top: 18px;
+}
