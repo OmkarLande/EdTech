@@ -1,41 +1,113 @@
 import '../components/styles/verifyemail.css'
 
-function VerifyEmail() {
-    let otp = ""
-    const handleChange = (e) => {
-      if(e.target.value.length === 1){
-        
-        try{
-          otp += e.target.value
-          document.getElementById(Number(e.target.id) +1).focus()
+import { useEffect, useState } from "react";
+import OtpInput from "react-otp-input";
+import { Link } from "react-router-dom";
+import { BiArrowBack } from "react-icons/bi";
+import { RxCountdownTimer } from "react-icons/rx";
+import { useDispatch, useSelector } from "react-redux";
+import { sendOtp, signUp } from "../services/Operation/authApi";
+import { useNavigate } from "react-router-dom";
 
-        }
-        catch(err){
-          console.log(otp)
-        }
-      }
-      
+function VerifyEmail() {
+
+  const [otp, setOtp] = useState("");
+  const { signupData, loading } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Only allow access of this route when user has filled the signup form
+    if (!signupData) {
+      navigate("/Studentsignin");
     }
+  }, []);
+
+  const handleVerifyAndSignup = (e) => {
+    e.preventDefault();
+    const {
+      accountType,
+      firstName,
+      lastName,
+      email,
+      password,
+      confirmPassword,
+    } = signupData;
+
+    dispatch(
+      signUp(
+        accountType,
+        firstName,
+        lastName,
+        email,
+        password,
+        confirmPassword,
+        otp,
+        navigate
+      )
+    );
+  };
+
+      
+    
   return (
-    <>
-        <div className="verify">
-            <h1>Verify Email</h1>
-            <p>A verification code has been sent</p>
-            <p>to you. Enter the code below</p>
-            <div className="otp-arr">
-                <input type="text" name="" id="1" onChange={handleChange}/>
-                <input type="text" name="" id="2" onChange={handleChange}/>
-                <input type="text" name="" id="3" onChange={handleChange}/>
-                <input type="text" name="" id="4" onChange={handleChange}/>
-                <input type="text" name="" id="5" onChange={handleChange}/>
-                <input type="text" name="" id="6" onChange={handleChange}/>
-            </div>
-            
-            <button>Verify and Register</button>
-            <p>back to login</p>
-            
+    <div className="min-h-[calc(100vh-3.5rem)] grid place-items-center">
+      {loading ? (
+        <div>
+          <div className="spinner"></div>
         </div>
-    </>
+      ) : (
+        <div className="vetify max-w-[500px] p-4 lg:p-8">
+          <h1 className="text-text font-semibold text-[1.875rem] leading-[2.375rem]">
+            Verify Email
+          </h1>
+          <p className="text-[1.125rem] leading-[1.625rem] my-4 text-text">
+            A verification code has been sent to you. Enter the code below
+          </p>
+          <form onSubmit={handleVerifyAndSignup}>
+            <OtpInput
+              value={otp}
+              onChange={setOtp}
+              numInputs={6}
+              renderInput={(props) => (
+                <input
+                  {...props}
+                  placeholder="-"
+                  style={{
+                    boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
+                  }}
+                  className="w-[48px] lg:w-[60px] border-0 bg-bg rounded-[0.5rem] text-text aspect-square text-center focus:border-0 focus:outline-2 focus:outline-green"
+                />
+              )}
+              containerStyle={{
+                justifyContent: "space-between",
+                gap: "0 6px",
+              }}
+            />
+            <button
+              type="submit"
+              className="w-full bg-green py-[12px] px-[12px] rounded-[8px] mt-6 font-medium text-text"
+            >
+              Verify Email
+            </button>
+          </form>
+          <div className="mt-6 flex items-center justify-between">
+            <Link to="/Studentsignin">
+              <p className="text-text flex items-center gap-x-2">
+                <BiArrowBack /> Back To Signup
+              </p>
+            </Link>
+            <button
+              className="inline-flex bg-bg text-green items-center gap-x-2"
+              onClick={() => dispatch(sendOtp(signupData.email,navigate))}
+            >
+              <RxCountdownTimer />
+              Resend it
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 

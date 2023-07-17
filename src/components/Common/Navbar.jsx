@@ -134,7 +134,7 @@ useEffect(() => {
         {/* Login / Signup / Dashboard */}
         <div className="hidden items-center gap-x-4 md:flex">
           {user && user?.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
-            <Link to="/dashboard/cart" className="relative">
+            <Link to="/dashboard/cart" className="relative inline-flex bg-bg ">
               <AiOutlineShoppingCart className="text-2xl text-text" />
               {totalItems > 0 && (
                 <span className="absolute -bottom-2 -right-2 grid h-5 w-5 place-items-center overflow-hidden rounded-full bg-bg text-center text-xs font-bold text-green">

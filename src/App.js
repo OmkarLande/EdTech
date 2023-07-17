@@ -76,7 +76,7 @@ function App() {
         />
 
       <Route
-          path="/VerifyEmail"
+          path="/verify-email"
           element={
             
               <VerifyEmail />

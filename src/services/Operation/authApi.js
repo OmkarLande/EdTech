@@ -1,5 +1,4 @@
 import { toast } from "react-hot-toast"
-
 import { setLoading, setToken } from "../../slices/authSlice"
 import { resetCart } from "../../slices/cartSlice"
 import { setUser } from "../../slices/profileSlice"
@@ -19,21 +18,15 @@ export function sendOtp(email, navigate) {
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
-      console.log("0")
       const response = await apiConnector("POST", SENDOTP_API, {
         email,
         checkUserPresent: true,
       })
-      console.log("1")
       console.log("SENDOTP API RESPONSE............", response)
-      console.log("2")
       console.log(response.data.success)
-      console.log("3")
       if (!response.data.success) {
         throw new Error(response.data.message)
       }
-      console.log("4")
-
       toast.success("OTP Sent Successfully")
       navigate("/verify-email")
     } catch (error) {
@@ -49,6 +42,7 @@ export function signUp(
   accountType,
   firstName,
   lastName,
+  contactNo,
   email,
   password,
   confirmPassword,
@@ -59,27 +53,31 @@ export function signUp(
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
+      console.log("1")
       const response = await apiConnector("POST", SIGNUP_API, {
         accountType,
         firstName,
         lastName,
+        contactNo,
         email,
         password,
         confirmPassword,
         otp,
       })
-
+      console.log("4")
       console.log("SIGNUP API RESPONSE............", response)
 
       if (!response.data.success) {
         throw new Error(response.data.message)
       }
+      console.log("2")
       toast.success("Signup Successful")
-      navigate("/login")
+      navigate("/dashboard/my-profile")
     } catch (error) {
       console.log("SIGNUP API ERROR............", error)
+      console.log("3")
       toast.error("Signup Failed")
-      navigate("/signup")
+      navigate("/Studentsignin")
     }
     dispatch(setLoading(false))
     toast.dismiss(toastId)
