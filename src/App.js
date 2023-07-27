@@ -3,19 +3,6 @@ import {Routes,Route} from 'react-router-dom'
 import Navbar from './components/Common/Navbar'
 import Login from './pages/Login'
 import Instructorlogin from './pages/Instructorlogin'
-<<<<<<< HEAD
-import VerifyEmail from './pages/Verifyemail'
-import Studentsignin from './pages/Studentsignin'
-import Instructorsignin from './pages/Istructorsignin'
-import Studentprofile from './pages/Studentprofile'
-import Instructorprofile from './pages/Instructorprofile'
-import Home from './pages/Home'
-import Resetpassword from "./pages/Resetpassword"
-import About from './pages/About'
-import ResendEmail from "./pages/Reset"
-import OpenRoute from './components/core/Auth/OpenRoute'
-import Createpassword from './pages/Createpassword'
-=======
 import Resetpassword from './pages/Resetpassword'
 import VerifyEmail from './pages/VerifyEmail'
 import Createpassword from './pages/Createpassword'
@@ -35,13 +22,11 @@ import Checkemail from './pages/Checkemail'
 import Sidebar from './components/Common/Sidebar'
 
 
->>>>>>> 06a3f5e235a4ca282667552c1a375f24cc598fbd
 
 function App() {
   return (
     <div className='w-screen min-h-screen bg-white flex flex-col font-roboto'>
       <Navbar />
-<<<<<<< HEAD
        <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path="/Studentprofile" element={<Studentprofile />}></Route>
@@ -112,8 +97,6 @@ function App() {
        </Routes>
         
     
-    </div>
-=======
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
@@ -136,8 +119,8 @@ function App() {
           <Route path="/Publish" element={<Publish />}></Route>
         </Routes>
       </BrowserRouter> 
-    </>
->>>>>>> 06a3f5e235a4ca282667552c1a375f24cc598fbd
+    </div>
+    
   )
 }
 
