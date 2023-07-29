@@ -2,18 +2,15 @@ import { React, useState } from "react";
 import {  NavLink } from "react-router-dom";
 import loginImage from "../../src/assests/images/login.png";
 import "../components/styles/Login.css";
-<<<<<<< HEAD
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 import { Link, useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { login } from "../services/Operation/authApi"
-=======
 
 import Button from "react-bootstrap/Button";
 
 import Instructorlogin from './Instructorlogin';
 
->>>>>>> 06a3f5e235a4ca282667552c1a375f24cc598fbd
 
 export default function Login() {
  
@@ -55,30 +52,6 @@ export default function Login() {
              <NavLink to='/Instructorlogin'>Instructor</NavLink>
             </button>
           </div>
-<<<<<<< HEAD
-          <label className="text-sm font-semibold" >Email Address</label>
-          <input required  type="text" value={email} onChange={handleOnChange} name="email" id="email" placeholder="Enter email address" className="placeholder:text-white p-2 py-4 rounded-md"/>
-          <label htmlFor="password" className="text-sm font-semibold">Password</label>
-          <input type={showPassword? "text" :"password"} name="password" value={password} onChange={handleOnChange} id="password" required placeholder="Enter Password" className="placeholder:text-white p-2 py-4 rounded-md"/>
-          <span
-          onClick={() => setShowPassword((prev) => !prev)}
-          className="absolute right-3 top-[38px] z-[10] cursor-pointer"
-        >
-          {showPassword ? (
-            <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
-          ) : (
-            <AiOutlineEye fontSize={24} fill="#AFB2BF" />
-          )}
-        </span>
-        <Link to="/forgetPassword">
-          <p className="text-sm font-semibold">Forgot Password?</p>
-          </Link>
-          <input type="submit" value="Sign In" />
-        </form>
-        <div className="carousal">
-          <img src={loginImage} alt="" className="loginimg" />
-        </div>
-=======
             <label htmlFor="email-input" className="text-sm font-semibold" >Email Address</label>
             <input type="email" name="email-input" id="email-input" placeholder="Enter email address" className="placeholder:text-white p-2 py-4 rounded-md"/>
             <label htmlFor="password" className="text-sm font-semibold">Password</label>
@@ -90,7 +63,6 @@ export default function Login() {
           <div className="carousal">
             <img src={loginImage} alt="" className="loginimg" />
           </div>
->>>>>>> 06a3f5e235a4ca282667552c1a375f24cc598fbd
       </div>
     </>
   );

@@ -61,17 +61,7 @@ function ResetPassword() {
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
       )}
-=======
-        <div className="click">
-          <NavLink to="/Checkemail"><input type="Submit" Value="Reset Your Password"/></NavLink>
-        </div>
-        <div className="return">
-          <NavLink to="/">Back to Login</NavLink>
-        </div>
-      </form>
->>>>>>> 06a3f5e235a4ca282667552c1a375f24cc598fbd
     </div>
   )
 }
