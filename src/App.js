@@ -20,13 +20,14 @@ import Instructoreditprofile from './pages/Instructoreditprofile';
 import Home from './pages/Home'
 import Checkemail from './pages/Checkemail'
 import Sidebar from './components/Common/Sidebar'
-
+import About from './pages/About'
 
 
 function App() {
   return (
     <div className='w-screen min-h-screen bg-white flex flex-col font-roboto'>
       <Navbar />
+      
        <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path="/Studentprofile" element={<Studentprofile />}></Route>
@@ -35,70 +36,35 @@ function App() {
         <Route path='/about' element={<About/>}></Route>
         <Route
           path="/Instructorlogin"
-          element={
-            
-              <Instructorlogin />
-            
-          }
+          element={<Instructorlogin />}
         />
-        
         <Route
           path="/Login"
-          element={
-            
-              <Login />
-            
-          }
+          element={<Login />}
         />
 
         <Route
           path="/Studentsignin"
-          element={
-            
-              <Studentsignin />
-            
-          }
+          element={<Studentsignin />}
         />
         <Route
           path="/Instructorsignin"
-          element={
-            
-              <Instructorsignin />
-            
-          }
+          element={<Instructorsignin />}
         />
 
-    <Route
+        <Route
           path="/forgetPassword"
-          element={
-            
-              <Resetpassword />
-            
-          }
+          element={<Resetpassword />}
         />  
         <Route 
           path='/update-password/:id'
-          element={
-            <Createpassword/>
-          }
+          element={<Createpassword/>}
         />
 
       <Route
           path="/verify-email"
-          element={
-            
-              <VerifyEmail />
-
-          }
-        />   
-
-      
-
-       </Routes>
-        
-    
-      <BrowserRouter>
-        <Routes>
+          element={<VerifyEmail />}
+        />
           <Route path='/' element={<Home/>}></Route>
           <Route path="/Login" element={<Login />}></Route>
           <Route path="/Instructorlogin" element={<Instructorlogin />}></Route>
@@ -117,8 +83,11 @@ function App() {
           <Route path="/CourseBuilder" element={<CourseBuilder />}></Route>
           <Route path="/Addpages" element={<AddPages />}></Route>
           <Route path="/Publish" element={<Publish />}></Route>
-        </Routes>
-      </BrowserRouter> 
+       </Routes>
+        
+    
+       
+    
     </div>
     
   )
