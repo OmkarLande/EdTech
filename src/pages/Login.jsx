@@ -2,15 +2,12 @@ import { React, useState } from "react";
 import {  NavLink } from "react-router-dom";
 import loginImage from "../../src/assests/images/login.png";
 import "../components/styles/Login.css";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-import { Link, useNavigate } from "react-router-dom"
-import { useDispatch } from "react-redux"
-import { login } from "../services/Operation/authApi"
-
-import Button from "react-bootstrap/Button";
-
-import Instructorlogin from './Instructorlogin';
-
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../services/Operation/authApi";
+import { TouchableOpacity, View } from "react-native";
+import Switch from "react-switch";
 
 export default function Login() {
  
@@ -37,20 +34,50 @@ export default function Login() {
     dispatch(login(email, password, navigate))
   }
 
-
+  const [selectedTab,setSelectedTab] = useState(0);
 
   return (
     <>
       <div className="login flex justify-center space-x-28 items-center mt-20">
         <form onSubmit={handleOnSubmit}   method="post">
           <h1 className="font-lora text-2xl font-bold text-emerald-400 w-444px h-38px mt-1 ml-2 mb-3">Welcome Back</h1>
-          <div className="logbuttons flex flex-row bg-gray rounded-full space-x-6" >
-            <button  className="bg-bg rounded-full text-green m-1 "  >
-              <NavLink to="/Login">Student</NavLink>
-            </button>
-            <button  className=" bg-gray text-bg m-1 border-0" >
-             <NavLink to='/Instructorlogin'>Instructor</NavLink>
-            </button>
+          <div className="Navigate">
+            <TouchableOpacity
+            style={{
+              width: '45%',
+              height: 50,
+              borderRadius: 15,
+              margin: 10,
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: selectedTab == 0? '#fff': "#ccc",
+            }}
+            onPress={()=>{
+              setSelectedTab(0);
+            }
+            }>
+              <NavLink style={{color: selectedTab == 0? '#33BEAF': "#fff",fontSize: 18, fontWeight: '700'}} to="/Login">
+                Student
+                </NavLink>
+            </TouchableOpacity>
+            <TouchableOpacity
+            style={{
+              width: '45%',
+              height: 50,
+              borderRadius: 15,
+              margin: 10,
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: selectedTab == 1? "#fff": "#ccc",
+            }}
+            onPress={()=>{
+              setSelectedTab(1);
+            }
+            }>
+            <NavLink style={{color: selectedTab == 1? '#33BEAF': "#fff",fontSize: 18, fontWeight: '700'}} to="/Instructorlogin">
+              Instructor
+              </NavLink>
+            </TouchableOpacity>
           </div>
             <label htmlFor="email-input" className="text-sm font-semibold" >Email Address</label>
             <input type="email" name="email-input" id="email-input" placeholder="Enter email address" className="placeholder:text-white p-2 py-4 rounded-md"/>

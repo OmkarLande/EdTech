@@ -1,0 +1,7 @@
+className="logbuttons flex flex-row bg-gray rounded-full space-x-6"
+		<button  className="bg-bg rounded-full text-green m-1 "  >
+              <NavLink to="/Login">Student</NavLink>
+            </button>
+            <button  className=" bg-gray text-bg m-1 border-0" >
+             <NavLink to='/Instructorlogin'>Instructor</NavLink>
+            </button>

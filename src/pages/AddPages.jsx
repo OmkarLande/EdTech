@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import '../components/styles/AddPages.css'
 import Button from "react-bootstrap/Button";
 import Sidebar2 from '../components/Common/Sidebar2';
-
 const AddPages = () => {
   return (
     <>
