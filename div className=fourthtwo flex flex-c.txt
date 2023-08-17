@@ -1,0 +1,103 @@
+<div className="fourthtwo flex flex-col">
+          <div>
+            <h2 className="text-center text-4xl font-semibold">
+              Meet Our Highly Skilled Instructors
+            </h2>
+            <p className="text-center text-lg font-normal mt-3">
+              Build skills with courses, certificates, and get online knowledge
+              from our world-class platform. ipsum is simply dummy text of the
+              printing and typesetting.
+            </p>
+          </div>
+          <div className="mt-40 flex flex-row justify-between">
+            <Card
+              className="mentor max-w-[24rem] overflow-hidden flex flex-col justify-center items-center"
+              style={{ width: "260px" }}
+            >
+              <CardHeader
+                floated={false}
+                shadow={false}
+                color="transparent"
+                className="m-0 rounded-none"
+              >
+                <img src={og} style={{ height: "290px", width: "360px" }} />
+              </CardHeader>
+
+              <CardFooter className="flex items-center justify-between">
+                <Typography className="font-semibold text-xl text-green text-left mb-">
+                  Omkar Lande
+                </Typography>
+              </CardFooter>
+              <p className="font-medium text-lg">Graphic Design Mentor</p>
+            </Card>
+            <Card
+              className="mentor max-w-[24rem] overflow-hidden flex flex-col justify-center items-center"
+              style={{ width: "260px" }}
+            >
+              <CardHeader
+                floated={false}
+                shadow={false}
+                color="transparent"
+                className="m-0 rounded-none"
+              >
+                <img src={sid} style={{ height: "290px", width: "360px" }} />
+              </CardHeader>
+
+              <CardFooter className="flex items-center justify-between">
+                <Typography className="font-semibold text-xl text-green text-left">
+                  Siddhesh Wayal
+                </Typography>
+              </CardFooter>
+              <p className="font-medium text-lg"> Fullstack Web Developer</p>
+            </Card>
+            <Card
+              className="mentor  max-w-[24rem] overflow-hidden flex flex-col justify-center items-center"
+              style={{ width: "260px" }}
+            >
+              <CardHeader
+                floated={false}
+                shadow={false}
+                color="transparent"
+                className="m-0 rounded-none"
+              >
+                <img
+                  src={harshal}
+                  style={{ height: "290px", width: "360px" }}
+                />
+              </CardHeader>
+
+              <CardFooter className="flex items-center justify-between">
+                <Typography className="font-semibold text-xl text-green text-left">
+                  Hrashal Pawar
+                </Typography>
+              </CardFooter>
+              <p className="font-medium text-lg"> Muscian</p>
+            </Card>
+            <Card
+              className="mentor  max-w-[24rem] overflow-hidden flex flex-col justify-center items-center"
+              style={{ width: "260px" }}
+            >
+              <CardHeader
+                floated={false}
+                shadow={false}
+                color="transparent"
+                className="m-0 rounded-none"
+              >
+                <img src={shera} style={{ height: "290px", width: "360px" }} />
+              </CardHeader>
+
+              <CardFooter className="flex items-center justify-between">
+                <Typography className="font-semibold text-xl text-green text-left">
+                  Sharayu Nagare
+                </Typography>
+              </CardFooter>
+              <p className="font-medium text-lg">Painter</p>
+            </Card>
+          </div>
+          <div className="flex flex-row justify-center items-center mt-20">
+            <button className="w-max text-2xl font-semibold p-8 text-bg">
+              {" "}
+              See More
+            </button>
+          </div>
+        </div>
