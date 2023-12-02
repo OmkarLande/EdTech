@@ -31,3 +31,5 @@ REACT_APP = link in case of deployment
 #PostMan Link
 
 https://elements.getpostman.com/redirect?entityId=26807468-4df0a34f-45f2-4bee-9c97-2539e417237c&entityType=collection
+
+https://documenter.getpostman.com/view/26807468/2s9YeK49xf
