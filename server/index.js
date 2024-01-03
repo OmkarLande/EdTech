@@ -54,6 +54,8 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-	console.log(`App is running at ${PORT} `)
-})
+    console.log(`App is running at http://localhost:${PORT}`);
+    console.log('Documentation: https://documenter.getpostman.com/view/26807468/2s9YeK49xf');
+});
+
 
